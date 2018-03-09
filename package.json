@@ -1,0 +1,9 @@
+{
+  "name": "aniko",
+  "version": "1.0.0",
+  "description": "redux backend",
+  "main": "yes",
+  "repository": "git@github.com:AnnieSoos/ohh1-v1.git",
+  "author": "aniko",
+  "license": "MIT"
+}
