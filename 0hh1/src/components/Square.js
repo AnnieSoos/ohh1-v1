@@ -19,15 +19,27 @@ class Square extends PureComponent {
     makeMove(y, x)
   }
 
+  classNames() {
+    const { value, locked, dupe, error } = this.props
 
-  render() {
-    return (
-      <button
-        onClick={this.handleClick}
-        className="CreateGameButton"
-        onHover={this.handleClick}
-        className="locked"
-      )
+    let classnames = ['Square']
+    classnames.push(`fill-${value || 0}`)
+    if (locked) classnames.push('locked')
+    return classnames.join(' ')
   }
 
-export default Square
+  render() {
+  return (
+    <div
+      className={this.classNames()}
+      onClick={this.handleClick}
+    />
+  )
+}
+}
+
+const mapStateToProps = ({ locked }, { x, y }) => ({
+  locked: locked.filter(l => l[0] === y && l[1] === x).length > 0
+})
+
+export default connect(mapStateToProps, { makeMove: move })(Square)
