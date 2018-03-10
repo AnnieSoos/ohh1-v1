@@ -7,6 +7,8 @@ import { createGame, move } from '../actions/game'
 class Square extends PureComponent {
   static propTypes = {
     value: PropTypes.number.isRequired,
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired,
   }
 
   render() {

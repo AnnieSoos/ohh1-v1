@@ -1,5 +1,5 @@
-const initialState = { open: true }
+const emptyBoard = { open: true }
 
-export default function(state = initialState, { type, payload } = {} ) {
+export default function(state = emptyBoard, { type, payload } = {} ) {
   return state
 }
