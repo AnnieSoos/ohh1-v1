@@ -21,9 +21,15 @@ export class Board extends PureComponent {
 
   renderSquare = rowIndex => (value, index) => {
     return (
-      <Square key={index} value={value} />
-    )
-  }
+      <Square
+       key={index}
+       value={value}
+       x={index}
+       y={rowIndex}
+     />
+   )
+ }
+
 
   render() {
     return (
@@ -33,6 +39,12 @@ export class Board extends PureComponent {
     )
   }
 }
-const mapStateToProps = ({ board }) => ({ board })
+
+const mapStateToProps = ( state ) => {
+  return {
+    board: state.board
+  }
+}
+
 
 export default connect(mapStateToProps)(Board)

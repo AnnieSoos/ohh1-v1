@@ -1,6 +1,5 @@
-export default (state = { open : true }, { type, payload } = {}) => {
+const initialState = { open: true }
+
+export default function(state = initialState, { type, payload } = {} ) {
   return state
 }
-
-
-const mapStateToProps = ({ sidebar }) => ({ sidebar })
