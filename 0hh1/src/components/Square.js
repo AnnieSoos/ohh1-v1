@@ -11,13 +11,23 @@ class Square extends PureComponent {
     y: PropTypes.number.isRequired,
   }
 
+
+  handleClick = () => {
+    const { x, y, makeMove, locked } = this.props
+    if (locked) return
+
+    makeMove(y, x)
+  }
+
+
   render() {
     return (
-      <div className={`Square fill -${this.props.value || 0}`} />
-
-
-    )
+      <button
+        onClick={this.handleClick}
+        className="CreateGameButton"
+        onHover={this.handleClick}
+        className="locked"
+      )
   }
-}
 
 export default Square
