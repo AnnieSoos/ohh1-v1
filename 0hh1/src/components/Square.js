@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './Square.css'
+import { connect } from 'react-redux'
 
 class Square extends PureComponent {
   static propTypes = {
@@ -9,7 +10,9 @@ class Square extends PureComponent {
 
   render() {
     return (
-      <div className="Square" />
+      <div className={`Square fill -${this.props.value || 0}`} />
+
+
     )
   }
 }

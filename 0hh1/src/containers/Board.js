@@ -35,5 +35,4 @@ export class Board extends PureComponent {
 }
 const mapStateToProps = ({ board }) => ({ board })
 
-// Then pass it to connect:
 export default connect(mapStateToProps)(Board)
