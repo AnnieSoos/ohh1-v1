@@ -1,0 +1,16 @@
+.CreateGameButton {
+  flex: 1;
+  border: 1px solid #121212;
+  font-size: 100%;
+  margin: 8px;
+  cursor: pointer;
+  padding: 10px 25px;
+  background-color: #5C5C5C; color: white ;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.19);
+  }
+
+.CreateGameButton:hover {
+  background-color: #242424;}
