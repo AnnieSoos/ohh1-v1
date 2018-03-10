@@ -1,5 +1,5 @@
 
-import siderbar from './siderbar'
+import siderbar from './sidebar'
 import board from './board'
 
 export default {

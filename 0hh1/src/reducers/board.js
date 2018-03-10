@@ -8,7 +8,16 @@
 //     - type : the action type
 //     - payload : [optional] payload
 //
-export default (state = [], { type, payload } = {}) => {
+
+const initialState = [
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ]
+]
+
+export default (state = initialState, { type, payload } = {}) => {
   return state
 }
-  
