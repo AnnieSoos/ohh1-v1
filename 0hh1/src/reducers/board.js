@@ -1,6 +1,6 @@
 import { CREATE_GAME } from '../actions/types'
 
-const initialState = [
+const emptyBoard = [
   [ 0,0,0,0,0,0 ],
   [ 0,0,0,0,0,0 ],
   [ 0,0,0,0,0,0 ],
@@ -9,7 +9,7 @@ const initialState = [
   [ 0,0,0,0,0,0 ]
 ]
 
-export default (state = initialState, { type, payload } = {}) => {
+export default (state = emptyBoard, { type, payload } = {}) => {
   switch (type) {
     case CREATE_GAME :
       return [].concat(payload.board)
