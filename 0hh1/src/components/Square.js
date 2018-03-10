@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './Square.css'
 import { connect } from 'react-redux'
+import { createGame, move } from '../actions/game'
 
 class Square extends PureComponent {
   static propTypes = {

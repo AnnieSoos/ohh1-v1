@@ -3,7 +3,7 @@ import { threeOrMoreInARow, numberOfValues } from './game'
 describe('threeOrMoreInARow', () => {
   const row = [0,2,1,2,2,2]
   const col = [1,1,1,0,2,2]
-  const col1 = [0,1,1,1,2,1]
+  const col1 = [0,1,1,0,2,2]
 
   it('returns the indices of the wrongly placed values', () => {
     expect(threeOrMoreInARow(row)).toEqual([3,4,5])
