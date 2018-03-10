@@ -206,6 +206,12 @@ export const fillBoard = (n = 6, solve = false) => {
 export const playerProgress = (board, locked) => {
   const totalSquares = board.length * board.length
   const lockedSquares = locked.length
-  const filledSquares = numSquaresFilled(board) // see previous exercise for implementation
+  const filledSquares = numSquaresFilled(board)
   return (filledSquares - lockedSquares) / (totalSquares - lockedSquares)
+}
+
+const mapStateToProps = ({ board, locked }) => {
+  return {
+    progress: Math.floor(playerProgress(board, locked) * 100)
+  }
 }
