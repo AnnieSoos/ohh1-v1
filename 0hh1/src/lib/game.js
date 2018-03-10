@@ -103,7 +103,7 @@ export const boardHasErrors = (board) => {
   const rows = board
   const columns = cols(board)
 
-\
+
   if (rows.filter(row =>
     (numberOfValues(row, 1) > row.length / 2 ||
       numberOfValues(row, 2) > row.length / 2)
