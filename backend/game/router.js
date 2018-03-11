@@ -1,6 +1,11 @@
 const Router = require('express').Router
 const User = require('./model')
 const router = new Router()
+const { Game } = require('../models')
+
+const game = require('../lib/game')
+const types = require('../actions/types')
+
 
 
 router.put('/games/:id', (req, res) => {
