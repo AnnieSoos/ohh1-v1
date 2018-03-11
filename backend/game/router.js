@@ -56,3 +56,28 @@ router.put('/games/:id', (req, res) => {
       })
     })
 })
+
+.delete('/games/:id', (req, res, next) => {
+      const id = req.params.id
+      Game.findById(id)
+        .then(entity() => {
+          if (entity.gameId !== req.game.id) {
+            res.status(403).send({
+              message: 'You\'re not allowed to delete this game!'
+            })
+          }
+          else {
+            return entity.destroy()
+          }
+        })
+        .then(_ => {
+          res.send({
+            message: 'The game was deleted succesfully'
+          })
+        })
+        .catch(error => {
+          res.status(500).send({
+            message: `Something went wrong`,
+            error
+          })
+        })
