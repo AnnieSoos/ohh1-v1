@@ -2,16 +2,28 @@ const Router = require('express').Router
 const User = require('./model')
 const router = new Router()
 const { Game } = require('../models')
+const { User } = require('../models')
 
 const game = require('../lib/game')
 const types = require('../actions/types')
 
 
+router.get('/games', (req, res) => {
+  Product.findAll({
+    attributes: ['userId', 'name', 'gameId']
+  })
+    .then(result => {
+      res.json(result)
+    })
+    .catch(err => {
+      res.status(500)
+      res.json({message: 'Something went wrong'})
+    })
+})
 
-router.put('/games/:id', (req, res) => {
+
+router.get('/games/:id', (req, res) => {
   const gameId = Number(req.params.id)
-  const updates = req.body
-
   console.log(`The user that's editting this Game has ID = ${req.user.id}`)
 
   Game.findById(req.params.id)
@@ -23,11 +35,10 @@ router.put('/games/:id', (req, res) => {
       }
       else {
         return entity.update(updates)
+        ///// payload, type: CREATE_GAME
+        /////////////////////////////////
       }
     })
-    .then(final => {
-      res.send(final)
-    })
     .catch(error => {
       res.status(500).send({
         message: `Something went wrong`,
@@ -36,28 +47,9 @@ router.put('/games/:id', (req, res) => {
     })
 })
 
-router.put('/games/:id', (req, res) => {
-  const gameId = Number(req.params.id)
-  const updates = req.body
 
-  console.log(`The user that's editting this game has ID = ${req.user.id}`)
 
-  Game.findById(req.params.id)
-    .then(entity => {
-      return entity.update(updates)
-    })
-    .then(final => {
-      res.send(final)
-    })
-    .catch(error => {
-      res.status(500).send({
-        message: `Something went wrong`,
-        error
-      })
-    })
-})
-
-.delete('/games/:id', (req, res, next) => {
+router.delete('/games/:id', (req, res, next) => {
       const id = req.params.id
       Game.findById(id)
         .then(entity() => {
@@ -81,3 +73,5 @@ router.put('/games/:id', (req, res) => {
             error
           })
         })
+
+module.exports = router

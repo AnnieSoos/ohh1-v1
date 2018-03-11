@@ -1,5 +1,5 @@
 const Router = require('express').Router
-const Users = require('./model')
+const User = require('./models')
 const bcrypt = require('bcrypt')
 const secret = require('../jwt').secret
 const sign = require('../jwt').sign
