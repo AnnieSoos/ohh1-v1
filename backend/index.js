@@ -2,8 +2,10 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const userRouter = require('./users/router')
+const gamesRouter = require('./games/router')
 const verify = require('./jwt').verify
 const User = require('./users/model')
+const Game = require('./game/model')
 
 const app = express()
   .use(cors())
@@ -57,3 +59,4 @@ app.use(function (req, res, next) {
 
 
 app.use(userRouter)
+app.use(gameRouter)
