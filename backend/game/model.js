@@ -10,6 +10,14 @@ const Game = sequelize.define('Users', {
     type: Sequelize.INTEGER,
     field: 'user_id'
   }
+  board: {
+    type: Sequelize.STRING
+    allowNull: true
+  }
+  locked: {
+    type: Sequelize.STRING
+    allowNull: true
+  }
   {
   tableName: 'Game',
   timestamps: false
