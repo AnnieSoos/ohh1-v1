@@ -5,5 +5,8 @@
   "main": "yes",
   "repository": "git@github.com:AnnieSoos/ohh1-v1.git",
   "author": "aniko",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "sinon": "^4.4.2"
+  }
 }

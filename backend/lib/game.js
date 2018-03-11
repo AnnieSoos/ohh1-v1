@@ -21,6 +21,14 @@ export const threeOrMoreInARow = (rowOrCol) => {
   return matches
 }
 
+```export const blah = ...
+```
+
+becomes:
+
+```module.exports.blah = ...
+```
+
 // Returns the number of occurrences of `value` in `rowOrCol`.
 //
 // Example:
@@ -250,3 +258,23 @@ export const playerProgress = (board, locked) => {
   const filledSquares = numSquaresFilled(board) // see previous exercise for implementation
   return (filledSquares - lockedSquares) / (totalSquares - lockedSquares)
 }
+
+module.exports = playerProgress;  /// nr1
+module.exports =      /// nr2
+module.exports =
+module.exports =
+module.exports =     //// nr5
+module.exports =
+module.exports =
+module.exports =
+module.exports =
+module.exports =      /// nr10
+module.exports =
+module.exports =
+module.exports =
+module.exports =
+module.exports =     /// nr15
+module.exports =
+module.exports =
+module.exports =
+module.exports =     /// nr19
