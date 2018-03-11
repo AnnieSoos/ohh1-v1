@@ -5,6 +5,8 @@
   "main": "1",
   "license": "MIT",
   "dependencies": {
-    "express": "4.16.2"
+    "bcrypt": "^1.0.3",
+    "express": "4.16.2",
+    "jsonwebtoken": "^8.2.0"
   }
 }
