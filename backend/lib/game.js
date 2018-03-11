@@ -21,13 +21,7 @@ export const threeOrMoreInARow = (rowOrCol) => {
   return matches
 }
 
-```export const blah = ...
-```
 
-becomes:
-
-```module.exports.blah = ...
-```
 
 // Returns the number of occurrences of `value` in `rowOrCol`.
 //
@@ -260,21 +254,21 @@ export const playerProgress = (board, locked) => {
 }
 
 module.exports = playerProgress;  /// nr1
-module.exports =      /// nr2
-module.exports =
-module.exports =
-module.exports =     //// nr5
-module.exports =
-module.exports =
-module.exports =
-module.exports =
-module.exports =      /// nr10
-module.exports =
-module.exports =
-module.exports =
-module.exports =
-module.exports =     /// nr15
-module.exports =
-module.exports =
-module.exports =
-module.exports =     /// nr19
+module.exports = threeOrMoreInARow;     /// nr2
+module.exports = numberOfValues;
+module.exports = areIdentical;
+module.exports = isBoardFull;   //// nr5
+module.exports = valueAllowed;
+module.exports = rows;
+module.exports = cols;
+module.exports = duplicateRows;
+module.exports = duplicateCols;     /// nr10
+module.exports = isPossibleMove;
+module.exports = originalValue;
+module.exports = boardHasErrors;
+module.exports = gameFinished;
+module.exports = fillBoard;    /// nr15
+module.exports = removeRandomValuesFromBoard;
+module.exports = filledPositions;
+module.exports = percentageFilled;
+module.exports = numSquaresFilled;    /// nr19
